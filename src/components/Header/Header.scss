@@ -1,0 +1,19 @@
+.Header {
+     
+      grid-area: header;
+      background-color: green;
+      display: grid;    
+      grid-template-columns: 50px 1fr;
+      align-items: center;
+    
+      .logo{
+            width: 50px;
+            height: 50px;
+            border:1px solid red;
+      }
+      .content {
+            text-align: center;
+            font-size: 32px;
+            border:1px solid yellow;
+}
+}

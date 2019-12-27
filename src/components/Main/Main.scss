@@ -1,0 +1,9 @@
+.Main {
+      grid-area: main;
+      background-color: yellow;
+      .image{
+            width: 100%;
+            img {width: 100%;
+            height: 200px;}
+      }
+}
