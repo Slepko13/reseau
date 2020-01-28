@@ -1,20 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './Header.scss';
 import logo from './logo.svg';
+import { NavLink } from 'react-router-dom';
 
-class Header extends Component {
-      state = {}
-      render () {
-            return (
-                  <div className="Header">
-                        <div className="logo"> <img src={logo} alt="logo" className="logo" /></div>
+const Header = (props) => {
 
-                        <div className="content">Header</div>
+      return (
+            <div className="Header">
+                  <div className="logo"> <img src={logo} alt="logo" className="logo" /></div>
 
-                  </div>
-            );
-      }
+                  <div className="content">Header</div>
+
+                  {props.isAuth ?
+                        <div>{props.login} <button onClick={props.logout}>Log Out</button></div> :
+                        <NavLink to={'/login'}></NavLink>}
+
+
+            </div>
+      );
 }
+
 
 export default Header;

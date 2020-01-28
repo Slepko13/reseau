@@ -1,13 +1,18 @@
 .App {
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 1fr 9fr;
+  grid-template-rows: 60px 1fr;
   grid-template-columns: 1fr 5fr;
   grid-template-areas: 
   "header header" 
-  "navbar main"
-  "navbar main"
+  "navbar content"
+  "navbar content"
   ;
-  width: 90vmax;
-  height: 95vh;
+  width: 1200px;
+  /* height: 95vh; */
+}
+
+.App-content {
+  grid-area: "content";
+  background-color: yellow;
 }

@@ -1,0 +1,21 @@
+.FormsControls{ 
+      .error {
+            textarea,
+            input {
+border :2px solid red;
+            }
+
+      }
+      .valid {
+            textarea,
+            input {
+border :2px solid green;
+
+      }
+}
+      .errorText {
+            color :red;
+            font-weight: bold;
+      }
+
+}

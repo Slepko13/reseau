@@ -1,0 +1,25 @@
+.Dialogs {
+     
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+    
+
+      .dialogsList {
+            padding: 10px;
+            
+            color: black;
+            font-size: 18px;
+           
+            
+      }
+      .messages {
+            padding: 10px;
+      }
+
+
+    
+
+}
+
+  
+    
