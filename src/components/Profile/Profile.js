@@ -21,6 +21,8 @@ const Profile = (props) => {
                   // addNewPost={this.props.addNewPost}
                   // handleChangeNewPost={this.props.handleChangeNewPost}
                   />
+
+
             </div>
 
       );

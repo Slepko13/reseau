@@ -18,6 +18,10 @@ const Login = (props) => {
 
                   <h1>LOGIN</h1>
                   <LoginForm onSubmit={submit} />
+                  <div>For testing use:
+                        <div>email : ReactAppTest@ukr.net</div>
+                        <div>password : TestPassword</div>
+                  </div>
 
             </div>
 

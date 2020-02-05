@@ -1,29 +1,12 @@
 .Users {
       padding: 10px;
      
-      .pagination {
-            display: flex;
-          
-
-           div {
-                 margin: 5px;
-           }
-            .selected {
-                  
-                  font-weight: bold;
-            }
-      }
       .wrapper {
            
             display: grid;          
             grid-template-columns : repeat(5,200px);
             justify-content: start;
-          
-            .user {
-                  margin: 10px;
-                  
-                  text-align: center;
-            }
+                    
       }
      
 }

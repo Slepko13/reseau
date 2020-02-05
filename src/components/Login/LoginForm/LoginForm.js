@@ -4,12 +4,14 @@ import { Input } from '../../common/FormsControls/FormsControls';
 import { required, maxLength } from '../../../utils/validators/validators';
 
 let maxLength30 = maxLength(30);
-let LoginForm = (props) => {
+// let LoginForm = (props) => {
+let LoginForm = ({ handleSubmit, error }) => {
 
-      console.log(props);
+
       return (
             <div className="LoginForm">
-                  <form onSubmit={props.handleSubmit}>
+                  {/* <form onSubmit={props.handleSubmit}> */}
+                  <form onSubmit={handleSubmit}>
                         <div><Field
                               name={"email"}
                               placeholder={"email"}
@@ -30,7 +32,8 @@ let LoginForm = (props) => {
                               type={"checkbox"}
                               component={Input}
                         />remember me</div>
-                        <div style={{ color: "red", fontWeight: 'bold' }}>{props.error}</div>
+                        {/* <div style={{ color: "red", fontWeight: 'bold' }}>{props.error}</div> */}
+                        <div style={{ color: "red", fontWeight: 'bold' }}>{error}</div>
                         <div><button>Login</button></div>
                   </form>
             </div>

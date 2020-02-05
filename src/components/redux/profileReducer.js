@@ -1,9 +1,11 @@
 import { profileAPI } from '../../api/api';
 
 let ADD_NEW_POST = 'ADD-NEW-POST';
-let HANDLE_CHANGE_NEW_POST = 'HANDLE-CHANGE-NEW-POST';
+// let HANDLE_CHANGE_NEW_POST = 'HANDLE-CHANGE-NEW-POST';
 let SET_PROFILE = 'SET-PROFILE';
 let SET_STATUS = 'SET-STATUS';
+
+let DELETE_POST = 'DELETE-POST';
 
 
 let initialProfilePage = {
@@ -44,6 +46,15 @@ let profileReducer = (profilePage = initialProfilePage, action) => {
 
 
             }
+            case DELETE_POST: {
+
+
+                  return {
+                        ...profilePage,
+                        posts: profilePage.posts.filter(post => post.id != action.id),
+                        // newPostText: ''
+                  }
+            }
             // case HANDLE_CHANGE_NEW_POST: {
 
             //       // let profilePageCopy = { ...profilePage };
@@ -79,6 +90,13 @@ export const addNewPostActionCreator = (post) => {
       return {
             type: ADD_NEW_POST,
             post
+      };
+}
+
+export const deletePost = (id) => {
+      return {
+            type: DELETE_POST,
+            id
       };
 }
 

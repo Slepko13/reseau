@@ -62,31 +62,31 @@ export const getAuthData = () => {
 }
 
 export const login = (email, password, rememberMe) => {
-      return (dispatch) => {
-            authAPI.login(email, password, rememberMe)
-                  .then(data => {
-                        if (data.resultCode === 0) {
-                              // let { id, email, login } = data.data;
-                              dispatch(getAuthData());
+      return async (dispatch) => {
+            let data = await authAPI.login(email, password, rememberMe);
 
-                        } else {
-                              let message = data.messages.length > 0 ? data.messages[0] : "some error"
-                              dispatch(stopSubmit('login', { _error: message }))
-                        }
+            if (data.resultCode === 0) {
+                  // let { id, email, login } = data.data;
+                  dispatch(getAuthData());
 
-                  })
+            } else {
+                  let message = data.messages.length > 0 ? data.messages[0] : "some error"
+                  dispatch(stopSubmit('login', { _error: message }))
+            }
+
+
 
       }
 }
 
 export const logout = () => {
-      return (dispatch) => {
-            authAPI.logout()
-                  .then(data => {
-                        if (data.resultCode === 0) {
-                              dispatch(setAuthData(null, null, null, false));
-                        }
-                  })
+      return async (dispatch) => {
+            let data = await authAPI.logout();
+
+            if (data.resultCode === 0) {
+                  dispatch(setAuthData(null, null, null, false));
+            }
+
 
       }
 }

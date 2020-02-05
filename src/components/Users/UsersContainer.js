@@ -70,8 +70,10 @@ class UsersContainer extends Component {
 
 
             return (
+
                   <>
                         {this.props.isFetching ? <Preloader /> : <Users
+
                               // {...this.props}
                               totalUsersCount={this.props.totalUsersCount}
                               pageSize={this.props.pageSize}
