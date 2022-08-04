@@ -58,7 +58,7 @@ class ProfileContainer extends Component<ProfileContainerPropsType> {
       }
       render() {
             return (
-                  <Profile {...this.props} isOwner={!this.props.match.params.userId}
+                  <Profile {...this.props} isOwner={!!this.props.match.params.userId}
                   />
             );
       }
