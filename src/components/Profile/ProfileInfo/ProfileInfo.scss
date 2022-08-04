@@ -1,11 +1,9 @@
 .ProfileInfo {
-      .profileImage{
-            // width: 100%;
+      .profileImage {
             img {
                   width: 100%;
                   height: 200px;
             }
-            
       }
       .profileDescription {
             padding: 10px;
@@ -14,5 +12,14 @@
                   height: 150px;
             }
       }
-     
+      .ProfileData {
+            margin-top: 10px;
+            margin-left: 10px;
+      }
+      .wrapContacts {
+            margin-top: 10px;
+            .Contacts {
+                  margin-left: 10px;
+            }
+      }
 }

@@ -1,41 +1,29 @@
 .NavBar {
-    
       grid-area: navbar;
       background-color: rgb(90, 141, 47);
       padding: 20px;
-      
-
       .items {
-      
-            .item { 
-           
+            .item {
                   a {
-                  color:#ffffff;
-                  text-decoration: none;
-                  
+                        color: #ffffff;
+                        text-decoration: none;
                   }
-
-            
-
                   a.active {
-                  color:gold;
+                        color: gold;
                   }
             }
-           
       }
       .friends {
             margin-top: 200px;
             .title {
                   font-size: 32px;
-                  color:#ffffff;
+                  color: #ffffff;
                   margin-bottom: 10px;
             }
             .friendsInfo {
                   display: grid;
                   grid-template-columns: 1fr 1fr 1fr;
-                  color:#ffffff;
+                  color: #ffffff;
             }
-            
       }
 }
-     

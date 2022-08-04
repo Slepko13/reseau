@@ -1,12 +1,8 @@
 .Users {
       padding: 10px;
-     
       .wrapper {
-           
-            display: grid;          
-            grid-template-columns : repeat(5,200px);
+            display: grid;
+            grid-template-columns: repeat(5, 200px);
             justify-content: start;
-                    
       }
-     
 }
